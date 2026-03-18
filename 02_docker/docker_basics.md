@@ -8,7 +8,6 @@ docker ps
 Aliases:
   docker container ls, docker container list, docker container ps, docker ps
 
-
 <!-- do more with docker ps -->
 docker ps --help
 
