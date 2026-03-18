@@ -19,4 +19,10 @@ docker version
 
 docker info
 
-<!--  -->
+<!-- docker run --help -->
+
+<!-- create and run a new container from an image -->
+docker run -it ubuntu(image)
+
+<!-- to pull or download only an image for future purposes -->
+docker pull image-name
