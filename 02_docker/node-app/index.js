@@ -1,12 +1,13 @@
-import express from 'express';
+import 'dotenv/config';
+import express from "express";
 
 const app = express();
 
-app.get('/', (req,res) => {
-    return res.json({
-        status: "Success",
-        message: "Hello from express server"
-    });
+app.get("/", (req, res) => {
+  return res.json({
+    status: "Success",
+    message: "Hello from express server",
+  });
 });
 
 // const port = +process.env.PORT ?? 8000;
@@ -18,8 +19,8 @@ app.listen(port, () => {
 
 /**
  * In order to run this basic application we need node.js of any version (what are the requirements)
- * 
- * Node - v22.18.0    
+ *
+ * Node - v22.18.0
  * npm - 10.9.3
  * may be
  * mongoose

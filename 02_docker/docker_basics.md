@@ -29,7 +29,6 @@ docker pull image-name
 
 <!-- docker cli -> used to interact with docker by running docker commands -->
 
-
 <!-- commands related to docker image -->
 
 <!-- delete an image -->
@@ -46,9 +45,6 @@ docker image prune
 
 <!-- pull or download an image -->
 docker image pull alpine
-
-
-
 
 <!-- commands related ot  docker container  -->
 # docker container --help
@@ -74,16 +70,19 @@ docker rm id, docker container rm id
  docker rm --force 7daec13b5981,  docker rm -f 9c72c76b014d
 
 #
+
 docker run -it ubuntu ls
 docker run -it ubuntu bash
 docker run -it busybox ping google.com
 docker run -it busybox - by default it goes inside sh (shell)
 docker image inspect busybox
 
-## Progress
-what are containers and images
-different between docker in virtualization or virtual machine
-how can i use docker engine
-how to talk to docker engine or docker daemon
-how to orchestrate and manage containers and images
-different between image and container
+<!-- Creating and Using a Dockerfile to Containerize Node.js App -->
+docker build -t my-app .
+docker images
+docker run -it my-app
+
+# pwd to check the current dorectory
+
+cat index.js
+npm start
