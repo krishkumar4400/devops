@@ -86,3 +86,12 @@ docker run -it my-app
 
 cat index.js
 npm start
+
+<!-- port mapping or exposing ports -->
+<!-- run cutom image -->
+docker run -it -p 8000:8000 my-app(image name)
+<!-- also -->
+docker run -it -p 5000:8000 my-app
+
+<!-- on the host machine the 5000 port is mapped to the 8000 inside the container -->
+

@@ -4,8 +4,7 @@ FROM node:20.17.0-alpine3.19
 WORKDIR /home/app
 
 # Copying the source code to docker image 
-COPY package-lock.json package-lock.json
-COPY package.json package.json
+COPY package* .
 RUN npm install
 
 COPY index.js index.js
