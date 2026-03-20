@@ -95,3 +95,52 @@ docker run -it -p 5000:8000 my-app
 
 <!-- on the host machine the 5000 port is mapped to the 8000 inside the container -->
 
+<!-- Auto Port Mapping in Docker: Dynamic Exposure of Container Ports -->
+// expose in Docker file then run -
+docker run -it -P my-app
+
+<!-- clean up - when i stop this container automatically remove this 
+-->
+docker run -it -P --rm  my-app
+
+<!--  Run container in background and print container ID -->
+docker run -itd -P my-app  
+
+
+<!-- stop the container -->
+docker stop 54380e277d63
+
+<!-- start the container -->
+docker start 54380e277d63
+
+<!-- stop or kill the container -->
+docker kill 54380e277d63
+
+<!-- remove or delete the container -->
+docker rm 54380e277d63
+
+//////////
+docker run -itd -P --rm my-app
+docker ps
+docker stop 89e2aa3b0788
+
+//////////
+docker run -itd -P --rm my-app
+docker ps
+docker kill e112a41018c7
+
+////////
+hub.docker.com
+    Github for docker images - Container Registry
+
+docker build -t krishkumar4400/node-application .
+docker push krishkumar4400/node-application
+
+docker run -it -P krishkumar4400/node-application
+
+docker tag my-app krishkumar4400/node-application
+
+docker tag my-app krishkumar4400/node-application:v1
+docker push krishkumar4400/node-application:v1
+
+
