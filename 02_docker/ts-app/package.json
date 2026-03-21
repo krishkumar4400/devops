@@ -10,13 +10,13 @@
   "main": "index.js",
   "type": "module",
   "dependencies": {
+    "express": "^5.2.1",
     "undici-types": "^7.18.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx nodemon index.ts",
-    "start": "node dist/index.ts",
-    "build": "tsc -p ."
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",

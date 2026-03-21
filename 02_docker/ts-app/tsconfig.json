@@ -1,14 +1,19 @@
 {
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
+        "target": "ES6",
+        "module": "es6",
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "strict": true,
+        "esModuleInterop": true,
     // File Layout
     // "rootDir": "./src",
     // "outDir": "./dist",
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "ES6",
-    "target": "es6",
+
     "types": [],
     // For nodejs:
     // "lib": ["esnext"],
@@ -33,8 +38,6 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
-    "strict": true,
-    "outDir": "./dist",
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
