@@ -14,8 +14,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"npx nodemon index.ts",
-    "start": "node src/index.js"
+    "dev": "npx nodemon index.ts",
+    "start": "node dist/index.ts",
+    "build": "tsc -p ."
   },
   "keywords": [],
   "author": "",
