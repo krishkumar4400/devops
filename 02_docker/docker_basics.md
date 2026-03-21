@@ -143,4 +143,6 @@ docker tag my-app krishkumar4400/node-application
 docker tag my-app krishkumar4400/node-application:v1
 docker push krishkumar4400/node-application:v1
 
-
+<!-- for multi stage build -->
+docker build -t ts-app-old -f Dockerfile.old .
+docker build -t ts-app-new .  
