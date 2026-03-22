@@ -124,7 +124,17 @@ COPY --from=builder /home/build/package*.json .
 # this basically means only install express. not dev dependencies 
 RUN npm install --omit=dev 
 
+
+
+RUN addgroup -S -g 1001 nodejs
+RUN adduser -S -u 1001 -G nodejs nodejs
+RUN chown -R nodejs:nodejs /home/app
+
+USER nodejs
+
 EXPOSE 3000
+# add port from .env
+ENV PORT=3000
 
 CMD [ "npm", "start" ]
 
