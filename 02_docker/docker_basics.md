@@ -163,3 +163,4 @@ docker run -it -p 8000:3000 -e PORT=3000 --envfile=./.env ts-app-new
     - how to publish those custom images
     - how to do multi stage builds
     - how to dockerize my application
+
