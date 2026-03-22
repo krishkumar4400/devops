@@ -106,7 +106,6 @@ docker run -it -P --rm  my-app
 <!--  Run container in background and print container ID -->
 docker run -itd -P my-app  
 
-
 <!-- stop the container -->
 docker stop 54380e277d63
 
@@ -147,23 +146,20 @@ docker push krishkumar4400/node-application:v1
 docker build -t ts-app-old -f Dockerfile.old .
 docker build -t ts-app-new .
 
-
 <!-- security best practices -->
 
 <!-- giving environment variables -->
 docker run -it -p 3000:3000 -e PORT=3000  ts-app-new
-docker run -it -p 3000:3000 -e PORT=3000 -e PORT=5000 -e PORT=8000 ts-app-new -> not possible 
+docker run -it -p 3000:3000 -e PORT=3000 -e PORT=5000 -e PORT=8000 ts-app-new -> not possible
 
 docker run -it -p 8000:3000 -e PORT=3000 -e MONGO_URI=x -e JWT_SECRET=y  ts-app-new
 
-// This will basically read whole env file and load those environment variables before running this application. 
+// This will basically read whole env file and load those environment variables before running this application.
 docker run -it -p 8000:3000 -e PORT=3000 --envfile=./.env ts-app-new
 
-// at this time i now know 
+// at this time i now know
     - how to create custom docker images
-    - how to work with custom images 
-    - how to publish those custom images 
-    - how to do multi stage builds 
-    - how to dockerize my application 
-
-
+    - how to work with custom images
+    - how to publish those custom images
+    - how to do multi stage builds
+    - how to dockerize my application
