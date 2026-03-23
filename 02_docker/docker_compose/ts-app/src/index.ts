@@ -9,7 +9,9 @@ async function init() {
   try {
     // // Redis Connection
     console.log(`Connecting Redis...`);
-    const redis = new Redis("redis://redis:6379", { lazyConnect: true });
+    const redis = new Redis("redis://localhost:6380", {
+      lazyConnect: true,
+    });
     await redis.connect();
     console.log(`Redis Connection Success...`);
 
@@ -19,10 +21,10 @@ async function init() {
     const { Client } = pg;
     const client = new Client({
       host: "localhost",
-      port: 5431,
-      database: "postgres",
-      user: "postgres",
-      password: "postgres",
+      port: 5433,
+      database: "my_db",
+      user: "my_user",
+      password: "my_pass",
     });
     await client.connect();
 
