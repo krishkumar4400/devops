@@ -23,7 +23,7 @@ services:
       - backend
     volumes:
       - postgres_data:/var/lib/postgresql/data
-# docker run -it --name -e POSTGRES_PASSWORD=1234 postgres postgres
+  # docker run -it --name -e POSTGRES_PASSWORD=1234 postgres postgres
 
   redis:
     image: redis:7-alpine
@@ -42,7 +42,6 @@ networks:
     driver: bridge
   backend:
     driver: backend
-
 
 volumes:
   postgres_data:
