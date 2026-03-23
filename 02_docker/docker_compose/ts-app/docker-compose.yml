@@ -50,6 +50,18 @@
 name: ai-saas
 
 services:
+  backend:
+    # image: krishkumar4400/backend 
+    # container_name: backend 
+    # ports:
+    #   - "8000:8000"
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: backend 
+    ports:
+      - "5000:5000"
+
   db:
     image: postgres:16
     container_name: postgres_database
@@ -86,4 +98,5 @@ services:
 
 volumes:
   postgres_data:
-  redis_data: 
+  redis_data:
+
